@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export default async function fetchRecipes(query) {
   const accessPoint = 'https://api.edamam.com/api/recipes/v2'
   const apiID = process.env.API_ID
