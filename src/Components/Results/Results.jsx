@@ -8,7 +8,12 @@ function Results({ recipeData }) {
     return <ResultCard recipe={recipe} key={recipe.uri} />
   })
 
-  return <section>{results}</section>
+  return (
+    <>
+      <h2 className='recipe-heading'>Recipes</h2>
+      <section className='results-container'>{results}</section>
+    </>
+  )
 }
 
 Results.propTypes = {

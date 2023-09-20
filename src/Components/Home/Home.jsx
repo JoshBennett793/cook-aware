@@ -7,9 +7,8 @@ export default function Home() {
 
   return (
     <>
-      <Search setRecipeData={setRecipeData}/>
+      <Search setRecipeData={setRecipeData} />
       <main>
-        <h2>Recipes</h2>
         <Results recipeData={recipeData} />
       </main>
     </>
