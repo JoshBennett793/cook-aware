@@ -11,13 +11,5 @@ export default defineConfig({
   define: {
     'process.env.API_ID': JSON.stringify(env.API_ID),
     'process.env.API_KEY': JSON.stringify(env.API_KEY)
-  },
-
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "./src/stylesheets/index.scss";'
-      }
-    }
   }
 })
