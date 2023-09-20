@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './Search.scss'
 import fetchRecipes from '../../apiCalls'
+import mockData from '../../mockData'
 
-export default function Search() {
+export default function Search({ setRecipeData }) {
   const [formData, setFormData] = useState({
     query: ''
   })
@@ -16,9 +17,11 @@ export default function Search() {
     })
   }
 
-  const submitForm = e => {
+  const submitForm = async e => {
     e.preventDefault()
-    fetchRecipes(formData.query)
+    // const data = await fetchRecipes(formData.query)
+    // setRecipeData(data)
+    setRecipeData(mockData)
   }
 
   return (
