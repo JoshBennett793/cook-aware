@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import './Search.scss'
-import fetchRecipes from '../../apiCalls'
 import mockData from '../../mockData'
+import fetchRecipes from '../../apiCalls'
+import PropTypes from 'prop-types'
+import { useState } from 'react'
 
-export default function Search({ setRecipeData }) {
+function Search({ setRecipeData }) {
   const [formData, setFormData] = useState({
     query: ''
   })
@@ -37,3 +38,9 @@ export default function Search({ setRecipeData }) {
     </form>
   )
 }
+
+Search.propTypes = {
+  setRecipeData: PropTypes.func.isRequired
+}
+
+export default Search
