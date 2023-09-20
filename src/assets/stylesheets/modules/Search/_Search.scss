@@ -1,0 +1,40 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: inline-block;
+  margin: 0 auto;
+
+  width: clamp(25%, 350px, 75%);
+  
+  .search-bar-wrapper {
+    display: flex;
+  }
+  
+  input[name='query'] {
+    padding-left: 1em;
+    width: 100%;
+  }
+  
+  > * {
+    height: clamp(1.5em, 30px, 2.5em);
+    margin-bottom: 1em;
+    border: none {
+      radius: 6px;
+    }
+  }
+  
+  .button-wrapper {
+    flex-grow: 1;
+    
+    button {
+      font-size: 1.5em;
+      background: rgb(108, 215, 186);
+      width: 100%;
+    }
+  }
+  
+  
+}

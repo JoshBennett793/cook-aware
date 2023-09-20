@@ -26,16 +26,22 @@ function Search({ setRecipeData }) {
   }
 
   return (
-    <form onSubmit={submitForm}>
-      <input
-        type='text'
-        name='query'
-        id='queryInput'
-        placeholder='Search by keyword... (optional)'
-        onChange={updateFormData}
-      />
-      <button type='submit'>Search</button>
-    </form>
+    <div className="form-wrapper">
+      <form className='search-form' onSubmit={submitForm}>
+        <div className='search-bar-wrapper'>
+          <input
+            type='text'
+            name='query'
+            id='queryInput'
+            placeholder='Search by keyword... (optional)'
+            onChange={updateFormData}
+          />
+        </div>
+        <div className='button-wrapper'>
+          <button type='submit'>Search</button>
+        </div>
+      </form>
+    </div>
   )
 }
 
