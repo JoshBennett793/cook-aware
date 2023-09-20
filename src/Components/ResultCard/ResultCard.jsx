@@ -7,7 +7,7 @@ function ResultCard({ recipe }) {
   const formattedCalories = (calories / servings).toFixed(0)
 
   return (
-    <>
+    <article>
       <img
         src={imageUrl}
         alt='Thumbnail of cooked dish that pertains to recipe'
@@ -15,7 +15,7 @@ function ResultCard({ recipe }) {
       <p>{formattedLabel}</p>
       <p>Source: {source}</p>
       <p>{formattedCalories} Calories</p>
-    </>
+    </article>
   )
 }
 

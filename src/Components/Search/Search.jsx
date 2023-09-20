@@ -1,4 +1,4 @@
-import './Search.scss'
+// import './Search.scss'
 import mockData from '../../mockData'
 import fetchRecipes from '../../apiCalls'
 import PropTypes from 'prop-types'

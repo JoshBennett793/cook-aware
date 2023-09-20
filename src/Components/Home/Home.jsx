@@ -1,4 +1,3 @@
-import './Home.scss'
 import Search from '../Search/Search'
 import Results from '../Results/Results'
 import { useState } from 'react'

@@ -8,7 +8,7 @@ function Results({ recipeData }) {
     return <ResultCard recipe={recipe} key={recipe.uri} />
   })
 
-  return <>{results}</>
+  return <section>{results}</section>
 }
 
 Results.propTypes = {
@@ -29,11 +29,10 @@ Results.propTypes = {
           dietLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
           healthLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
           ingredientLines: PropTypes.arrayOf(PropTypes.string).isRequired,
-          calories: PropTypes.number.isRequired,
-
+          calories: PropTypes.number.isRequired
         }).isRequired
       })
-    ).isRequired
+    )
   }).isRequired
 }
 
