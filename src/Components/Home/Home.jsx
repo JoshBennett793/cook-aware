@@ -4,7 +4,7 @@ import Results from '../Results/Results'
 import { useState } from 'react'
 
 export default function Home() {
-  const [recipeData, setRecipeData] = useState([])
+  const [recipeData, setRecipeData] = useState({})
 
   return (
     <>
