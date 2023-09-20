@@ -1,10 +1,11 @@
 import Home from '../Home/Home'
-import './App.scss'
 
 function App() {
   return (
     <>
-      <h1>Cook Aware</h1>
+      <header>
+        <h1>Cook Aware</h1>
+      </header>
       <Home />
     </>
   )
