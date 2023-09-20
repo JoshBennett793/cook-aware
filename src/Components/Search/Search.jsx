@@ -20,9 +20,9 @@ function Search({ setRecipeData }) {
 
   const submitForm = async e => {
     e.preventDefault()
-    // const data = await fetchRecipes(formData.query)
-    // setRecipeData(data)
-    setRecipeData(mockData)
+    const data = await fetchRecipes(formData.query)
+    setRecipeData(data)
+    // setRecipeData(mockData)
   }
 
   return (

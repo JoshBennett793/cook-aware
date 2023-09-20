@@ -18,7 +18,7 @@
     width: 100%;
   }
   
-  > * {
+  * {
     height: clamp(1.5em, 30px, 2.5em);
     margin-bottom: 1em;
     border: none {
@@ -33,6 +33,7 @@
       font-size: 1.5em;
       background: rgb(108, 215, 186);
       width: 100%;
+      cursor: pointer;
     }
   }
   

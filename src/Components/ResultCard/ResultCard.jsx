@@ -1,20 +1,38 @@
 import PropTypes from 'prop-types'
 
 function ResultCard({ recipe }) {
-  const { label, source, calories, yield: servings, images } = recipe
+  const {
+    label,
+    source,
+    calories,
+    yield: servings,
+    images,
+    ingredientLines
+  } = recipe
   const imageUrl = images.SMALL.url
-  const formattedLabel = label.replace(' recipes', '')
+  const regex = /recip(?:e|es)/gi
+  const formattedLabel = label.replace(regex, '').trim()
   const formattedCalories = (calories / servings).toFixed(0)
+  const numOfIngredients = ingredientLines.length
 
   return (
-    <article>
+    <article className='recipe-card'>
       <img
         src={imageUrl}
         alt='Thumbnail of cooked dish that pertains to recipe'
+        className='recipe-img'
       />
-      <p>{formattedLabel}</p>
-      <p>Source: {source}</p>
-      <p>{formattedCalories} Calories</p>
+      <p className='recipe-label'>{formattedLabel}</p>
+      <div className='recipe-text-wrapper'>
+        <p className='recipe-calories'>
+          <span className='recipe-card-num'>{formattedCalories}</span> Calories
+        </p>
+        <div className='divider'>|</div>
+        <p className='recipe-ingredients-num'>
+          <span>{numOfIngredients}</span> Ingredients
+        </p>
+      </div>
+      {/* <p className='recipe-source'>{source}</p> */}
     </article>
   )
 }
@@ -29,7 +47,8 @@ ResultCard.propTypes = {
       SMALL: PropTypes.shape({
         url: PropTypes.string.isRequired
       })
-    }).isRequired
+    }).isRequired,
+    ingredientLines: PropTypes.arrayOf(PropTypes.string).isRequired
   }).isRequired
 }
 
