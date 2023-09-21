@@ -10,18 +10,83 @@ describe('Search form submission user flow ', () => {
       { statusCode: 200, fixture: 'searchRequest.json' }
     ).as('searchRequest')
     cy.visit('http://localhost:5173')
+    cy.get('input[name=query]').as('searchBar')
+    cy.get('button[type=submit]').as('submitBtn')
+  })
+
+  it('User can type in text input', () => {
+    cy.get('form').within(() => {
+      cy.get('@searchBar').type('Chicken Nuggets')
+      cy.get('@searchBar').should('have.value', 'Chicken Nuggets')
+    })
   })
 
   it('Receives good response status from network request', () => {
-    cy.get('input[name=query]').as('search-bar')
-
     cy.get('form').within(() => {
-      cy.get('@search-bar').type('Chicken Nuggets')
-      cy.get('button[type=submit]').click()
+      cy.get('@searchBar').type('Chicken Nuggets')
+      cy.get('@submitBtn').click()
     })
 
     cy.wait('@searchRequest').then(interception => {
       expect(interception.response.statusCode, 'Fetch call: ').to.equal(200)
+    })
+  })
+
+  it('Renders recipe card DOM content after fetch call', () => {
+    cy.get('form').within(() => {
+      cy.get('@searchBar').type('Chicken Nuggets')
+      cy.get('@submitBtn').click()
+    })
+
+    cy.wait('@searchRequest').then(() => {
+      cy.get('.recipe-card').each(($card, index) => {
+        cy.wrap($card).within(() => {
+          if (index === 0) {
+            cy.get('.recipe-img').should('have.attr', 'src', 'small-img-url')
+            cy.get('.recipe-img').should(
+              'have.attr',
+              'alt',
+              'Thumbnail of cooked dish that pertains to recipe'
+            )
+
+            cy.get('.recipe-label').should('have.text', "Popeye Tso's Chicken")
+
+            cy.get('.recipe-calories').should('include.text', 507)
+            cy.get('.recipe-calories').should('include.text', 'Calories')
+
+            cy.get('.divider').should('have.text', '|')
+
+            cy.get('.recipe-ingredients-num').should('include.text', 14)
+            cy.get('.recipe-ingredients-num').should(
+              'include.text',
+              'Ingredients'
+            )
+          } else if (index === 1) {
+            cy.get('.recipe-img').should('have.attr', 'src', 'small-img-url')
+            cy.get('.recipe-img').should(
+              'have.attr',
+              'alt',
+              'Thumbnail of cooked dish that pertains to recipe'
+            )
+
+            cy.get('.recipe-label').should(
+              'have.text',
+              'Grilled Chicken Nuggets'
+            )
+
+            cy.get('.recipe-calories').should('include.text', 311)
+            cy.get('.recipe-calories').should('include.text', 'Calories')
+
+            cy.get('.divider').should('have.text', '|')
+
+            cy.get('.recipe-ingredients-num').should('include.text', 7)
+            cy.get('.recipe-ingredients-num').should(
+              'include.text',
+              'Ingredients'
+            )
+          }
+        })
+      })
     })
   })
 })

@@ -16,17 +16,17 @@
         "image": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7bf00a9201d590dd4eaa659861c3c21bfd94b24b4a9938868e6217daa0f62faf",
         "images": {
           "THUMBNAIL": {
-            "url": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812-s.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bac6abdfa7259413161eacb7ea2e4357423cd659bd6d03977ea42891406d3758",
+            "url": "thumbnail-img-url",
             "width": 100,
             "height": 100
           },
           "SMALL": {
-            "url": "h",
+            "url": "small-img-url",
             "width": 200,
             "height": 200
           },
           "REGULAR": {
-            "url": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172921Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=fc128b7110336e0fad4798ae7f41ed72a2d3cd5d7271b2af888d4d3d2ba87599",
+            "url": "regular-img-url",
             "width": 300,
             "height": 300
           }
@@ -812,21 +812,21 @@
     {
       "recipe": {
         "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_b5e1c34c9042a35a534069f438ec86fc",
-        "label": "Popeye Tso's Chicken Recipe",
+        "label": "Grilled Chicken Nuggets Recipe",
         "image": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7bf00a9201d590dd4eaa659861c3c21bfd94b24b4a9938868e6217daa0f62faf",
         "images": {
           "THUMBNAIL": {
-            "url": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812-s.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bac6abdfa7259413161eacb7ea2e4357423cd659bd6d03977ea42891406d3758",
+            "url": "thumbnail-img-url",
             "width": 100,
             "height": 100
           },
           "SMALL": {
-            "url": "h",
+            "url": "small-img-url",
             "width": 200,
             "height": 200
           },
           "REGULAR": {
-            "url": "https://edamam-product-images.s3.amazonaws.com/web-img/0c5/0c5ba5e925e8de4a16deaa1864cb1812.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGwWtEGas5xcLXHgR%2FFZzTbIIlyby17Yn2R7QRT3juCCAiEAxQeP%2Fi9YhVaBvktP2%2ByXB2v%2BUz4HWLRPP1OfT9BXbHQqwgUIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAuAkIfRip7Rf55m3CqWBZMLWm7NX7H3THrg5DLGk%2F%2BSPKKr9DgQTydbib1YtLt73oexf8jhLh0uRdKuOAhpNbGBx5ZGxMygW0Uj%2Fa9b1jd%2Bxu9Bqum3ZGq8%2BruDnVhRD9dFpXxlz9b3EtHN8SDIgOn5tHnYzVMwgjYPQnQzjmKbAxMtzndKIyLO9NwgK3ajkZQmQq4WsiiDa7M%2FcurDlValW54oqvm8TrgiwEHZYwrtzFSu21OLhVHk395eVhCKwKFdGtryG82jMH1lzQjOT0fSUOLUkI18lOyhEMoXy%2BJ7h0llNwfpR1EAYAkoW2w94k1cHvP%2F5siptlRNaLqIHq9vldlSBP16NLks7sG7oNceNGglsiAvSVnqdGjBKoKMpZ5E%2FjTH1J3lkQItewgQyHw8IA2OE0P8vzCj88d%2B6lmqVvQ049Oy6Ck9t6P1y9BgPzOD35tjt6SUwpmuudYIgb3JstGE6wNVhnLd3PMsFeFAyxMdpuIEna7rFZRIq5Epfs5%2Be5yqSUBb8VnsIPRuT1Ondc8fHOEztYcj5fGaAHUc6XD4zIhhjP7rs0gXlSmRRGEoFAAkVcPmpnFJuX51VKYCygcqDSgopj1IwH%2BhA2SVB2qxjtm0WvTJnNaCNT3RNCmpAyn0GFzuaWK3PGOQKVpanR6yOMAbn1diK7R38bJ%2BeAZpET1Q3k7bp%2FgQfiZMZ6QHByYAZb37RS673oBzwnIUQgYXZGuhMPrsKs1%2B5tpHniUJuhCgPlICXEKWHHas24lM8vcBGAGF5C%2FwrG%2FnEGgGLDuSCH21x%2Fs3ifIJLJ%2BvsepzYDMXbbhZ9Ubq0Due1RwdPXy8P51gKad7rp2zcnu8kCDHmGN3v71uei3ekVfwxaxF6p9v3nwD8gs7LTNaXP%2BwqZ1AMMmjp6gGOrEB%2FoE7uQKU2gDDH1UmhfC%2F2lKZjVOEaQkKHYFfvW3PqBFJ7MCNIL6ypPzbQZyEEydv2IU7wqUJitvxQsXYSJnbOl%2BdujZca5ht7YxIAk6Kx5R1BraR82ugHZ80piDKumUcQDqpiZ2mIaXGWOznDKh4e4zk39ANuWH9q2ENlp1YVM917zMg85qUYcZrp2sWobhMtoZDsQZmZRdrHsJRkBq3dnUzdDqPJ5QssUXtbz1ZOkgQ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230919T172921Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFAEXRUFFK%2F20230919%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=fc128b7110336e0fad4798ae7f41ed72a2d3cd5d7271b2af888d4d3d2ba87599",
+            "url": "regular-img-url",
             "width": 300,
             "height": 300
           }
@@ -854,19 +854,12 @@
         "cautions": ["Gluten", "Wheat", "Sulfites"],
         "ingredientLines": [
           "1/4 cup low sodium chicken stock",
-          "1 tablespoon soy sauce",
-          "1 tablespoon rice wine vinegar",
-          "2 tablespoons hoisin sauce",
-          "1 teaspoon Chinese chili paste",
-          "2 teaspoons sesame oil",
-          "3 tablespoons sugar",
+          "1 pound chicken breast",
           "2 teaspoons cornstarch",
-          "2 tablespons vegetable oil",
-          "2 cloves minced garlic (about 2 teaspoons",
-          "1 teapsoon minced fresh ginger",
-          "A half dozen dried red whole chilis",
-          "18 to 24 pieces Popeye's Chicken Nuggets, or 3 order Popeye's Popcorn Shrimp",
-          "3 scallion greens, sliced"
+          "2 tablespons olive oil",
+          "1 teaspoon salt",
+          "1 teaspoon pepper",
+          "2 cloves minced garlic (about 2 teaspoons"
         ],
         "ingredients": [
           {
@@ -1010,7 +1003,7 @@
             "image": "https://www.edamam.com/food-img/b89/b89986ed6aa466285bdd99bac34b3c46.jpg"
           }
         ],
-        "calories": 2026.2576628774198,
+        "calories": 1245.2576628774198,
         "totalCO2Emissions": 6148.115239789653,
         "co2EmissionsClass": "F",
         "totalWeight": 1553.261742424138,

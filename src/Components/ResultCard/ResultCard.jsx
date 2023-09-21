@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 function ResultCard({ recipe }) {
   const {
     label,
-    source,
     calories,
     yield: servings,
     images,
@@ -32,7 +31,6 @@ function ResultCard({ recipe }) {
           <span>{numOfIngredients}</span> Ingredients
         </p>
       </div>
-      {/* <p className='recipe-source'>{source}</p> */}
     </article>
   )
 }
