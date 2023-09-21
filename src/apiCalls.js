@@ -6,7 +6,7 @@ export default async function fetchFromAPI(query) {
 
   try {
     const response = await fetch(
-      `${accessPoint}?type=public&q=${query}&app_id=${apiID}&app_key=${apiKey}`
+      `${accessPoint}?type=public&q=${query.trim()}&app_id=${apiID}&app_key=${apiKey}`
     )
 
     if (!response.ok) {
@@ -15,6 +15,6 @@ export default async function fetchFromAPI(query) {
 
     return await response.json()
   } catch (error) {
-    console.log(error)
+    return error
   }
 }
