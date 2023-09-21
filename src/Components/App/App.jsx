@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>Cook Aware</h1>
+        <h1 className='app-name-heading'>Cook Aware</h1>
       </header>
       <Home />
     </>
