@@ -1,3 +1,7 @@
 header {
   @include centered-flex-container;
 }
+
+main {
+  padding: 2em;
+}
