@@ -48,8 +48,8 @@ function Search() {
   )
 }
 
-Search.propTypes = {
-  setRecipeData: PropTypes.func.isRequired
+useRecipes.propTypes = {
+  fetchRecipes: PropTypes.func.isRequired
 }
 
 export default Search

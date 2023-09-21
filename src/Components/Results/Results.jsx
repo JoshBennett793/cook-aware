@@ -17,7 +17,7 @@ function Results() {
   )
 }
 
-Results.propTypes = {
+useRecipes.propTypes = {
   recipeData: PropTypes.shape({
     hits: PropTypes.arrayOf(
       PropTypes.shape({
