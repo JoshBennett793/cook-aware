@@ -4,16 +4,26 @@ import fetchFromAPI from '../apiCalls'
 const RecipeContext = createContext()
 
 export function RecipeContextProvider({ children }) {
-  const [recipeData, setRecipeData] = useState({})
+  const [recipeData, setRecipeData] = useState({
+    isDataAvailable: false,
+    recipeData: {}
+  })
+  const [error, setError] = useState('')
 
   async function fetchRecipes(query) {
     const data = await fetchFromAPI(query)
-    setRecipeData(data)
+    if (data.name === 'Error') {
+      setRecipeData({ isDataAvailable: false, data: {}, message: data.message })
+    } else {
+      setRecipeData({ isDataAvailable: true, recipeData: data })
+    }
   }
 
   const value = {
-    recipeData,
-    fetchRecipes
+    ...recipeData,
+    fetchRecipes,
+    error,
+    setError
   }
 
   return (
