@@ -1,10 +1,11 @@
+import { useRecipes } from '../../context/ContextProvider'
 import ResultCard from '../ResultCard/ResultCard'
 import PropTypes from 'prop-types'
 
-function Results({ recipeData }) {
+function Results() {
+  const { recipeData } = useRecipes()
   const recipes = recipeData.hits
   const results = recipes?.map(({ recipe }) => {
-    console.log(recipe)
     return <ResultCard recipe={recipe} key={recipe.uri} />
   })
 
@@ -16,7 +17,7 @@ function Results({ recipeData }) {
   )
 }
 
-Results.propTypes = {
+useRecipes.propTypes = {
   recipeData: PropTypes.shape({
     hits: PropTypes.arrayOf(
       PropTypes.shape({

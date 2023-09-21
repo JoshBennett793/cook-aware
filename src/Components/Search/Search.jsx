@@ -1,13 +1,13 @@
-// import './Search.scss'
 import mockData from '../../mockData'
-import fetchRecipes from '../../apiCalls'
-import PropTypes from 'prop-types'
 import { useState } from 'react'
+import { useRecipes } from '../../context/ContextProvider'
+import PropTypes from 'prop-types'
 
-function Search({ setRecipeData }) {
+function Search() {
   const [formData, setFormData] = useState({
     query: ''
   })
+  const { fetchRecipes } = useRecipes()
 
   const updateFormData = e => {
     setFormData(prev => {
@@ -20,16 +20,18 @@ function Search({ setRecipeData }) {
 
   const submitForm = async e => {
     e.preventDefault()
-    const data = await fetchRecipes(formData.query)
-    setRecipeData(data)
-    // setRecipeData(mockData)
+    fetchRecipes(formData.query)
   }
 
   return (
-    <div className="form-wrapper">
+    <div className='form-wrapper'>
       <form className='search-form' onSubmit={submitForm}>
         <div className='search-bar-wrapper'>
-          <label className='query-input-label' htmlFor="queryInput" aria-label='Search input'></label>
+          <label
+            className='query-input-label'
+            htmlFor='queryInput'
+            aria-label='Search input'
+          ></label>
           <input
             type='text'
             name='query'
@@ -46,8 +48,8 @@ function Search({ setRecipeData }) {
   )
 }
 
-Search.propTypes = {
-  setRecipeData: PropTypes.func.isRequired
+useRecipes.propTypes = {
+  fetchRecipes: PropTypes.func.isRequired
 }
 
 export default Search

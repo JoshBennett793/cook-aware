@@ -1,15 +1,13 @@
 import Search from '../Search/Search'
 import Results from '../Results/Results'
-import { useState } from 'react'
 
 export default function Home() {
-  const [recipeData, setRecipeData] = useState({})
 
   return (
     <>
-      <Search setRecipeData={setRecipeData} />
+      <Search />
       <main>
-        <Results recipeData={recipeData} />
+        <Results />
       </main>
     </>
   )
