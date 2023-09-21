@@ -29,6 +29,7 @@ function Search({ setRecipeData }) {
     <div className="form-wrapper">
       <form className='search-form' onSubmit={submitForm}>
         <div className='search-bar-wrapper'>
+          <label className='query-input-label' htmlFor="queryInput" aria-label='Search input'></label>
           <input
             type='text'
             name='query'
