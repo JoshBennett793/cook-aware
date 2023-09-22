@@ -77,7 +77,7 @@ function RecipeDetail() {
   )
 
   const fatMacros = () => {
-    const macros = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
+    const fats = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
       if (key.includes('FA')) {
         const nutrient = recipe.totalNutrients[key]
         const dailyValue = recipe.totalDaily[key]
@@ -93,15 +93,13 @@ function RecipeDetail() {
 
     return (
       <article className='fat-macros'>
-        {macros.map(macro => {
+        {fats.map(fat => {
           return (
-            <div className='macro-item' key={macro.label}>
+            <div className='macro-item' key={fat.label}>
               <div className='macro-grid'>
-                <span className='first-span'>{macro.label}</span>
-                <span className='second-span'>{macro.quantity}</span>
-                <span className='third-span'>
-                  {macro.dv ? `${macro.dv}%` : ''}
-                </span>
+                <span className='first-span'>{fat.label}</span>
+                <span className='second-span'>{fat.quantity}</span>
+                <span className='third-span'>{fat.dv ? `${fat.dv}%` : ''}</span>
               </div>
               <hr />
             </div>
@@ -112,7 +110,7 @@ function RecipeDetail() {
     )
   }
 
-  const carbs = () => {
+  const carbMacros = () => {
     const nutrientValues = [
       'CHOCDF',
       'CHOCDF.net',
@@ -136,7 +134,7 @@ function RecipeDetail() {
     }, [])
 
     return (
-      <article className='fat-macros'>
+      <article className='carb-macros'>
         {carbs.map(carb => {
           return (
             <div className='macro-item' key={carb.label}>
@@ -156,10 +154,61 @@ function RecipeDetail() {
     )
   }
 
+  const remainingMacros = () => {
+    const wrongKeys = [
+      'ENERC_KCAL',
+      'FAT',
+      'FASAT',
+      'FATRN',
+      'FAMS',
+      'FAPU',
+      'CHOCDF',
+      'CHOCDF.net',
+      'FIBTG',
+      'SUGAR',
+      'SUGAR.added'
+    ]
+
+    const macros = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
+      if (!wrongKeys.includes(key)) {
+        const nutrient = recipe.totalNutrients[key]
+        const dailyValue = recipe.totalDaily[key]
+        acc.push({
+          label: nutrient.label,
+          quantity: `${nutrient.quantity.toFixed(0)}${nutrient.unit}`,
+          dv: dailyValue?.quantity.toFixed(0)
+        })
+        return acc
+      }
+      return acc
+    }, [])
+
+    return (
+      <article className='remaining-macros'>
+        {macros.map(macro => {
+          return (
+            <div className='macro-item' key={macro.label}>
+              <div className='macro-grid'>
+                <span className='first-span'>{macro.label}</span>
+                <span className='second-span'>{macro.quantity}</span>
+                <span className='third-span'>
+                  {macro.dv ? `${macro.dv}%` : ''}
+                </span>
+              </div>
+              <hr />
+            </div>
+          )
+        })}
+        <br />
+      </article>
+    )
+  }
+
   const allMacros = (
     <>
       {fatMacros()}
-      {carbs()}
+      {carbMacros()}
+      {remainingMacros()}
     </>
   )
 

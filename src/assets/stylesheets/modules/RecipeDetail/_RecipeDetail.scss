@@ -82,37 +82,41 @@
 }
 
 article.fat-macros,
-article.carb-macros {
-  width: 100%;
+article.carb-macros,
+article.remaining-macros {
   line-height: 3;
-
-  *:not(:nth-child(1)) {
-    margin-left: 20px;
-  }
+  
   .macro-item {
     position: relative;
     display: flex;
     flex-direction: column;
-
+    
     .macro-grid {
       display: grid;
       grid-template-columns: 8fr repeat(2, 1fr);
       align-items: center;
-
+      
       .second-span {
         grid-column: 2;
       }
-
+      
       .third-span {
         grid-column: 3;
       }
     }
-
+    
     hr {
       position: absolute;
       top: 55%;
       right: 0px;
       width: 100%;
     }
+  }
+}
+
+article.fat-macros,
+article.carb-macros {
+  *:not(:nth-child(1)) {
+    margin-left: 20px;
   }
 }
