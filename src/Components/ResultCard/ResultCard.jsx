@@ -39,6 +39,7 @@ function ResultCard({ recipe }) {
 
 ResultCard.propTypes = {
   recipe: PropTypes.shape({
+    uri: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     source: PropTypes.string.isRequired,
     calories: PropTypes.number.isRequired,
