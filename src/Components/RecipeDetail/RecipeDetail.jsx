@@ -3,13 +3,11 @@ import { useRecipes } from '../../context/ContextProvider'
 import { useEffect } from 'react'
 
 function RecipeDetail() {
-  const { isDataAvailable, fetchRecipes, recipeData } = useRecipes() // type check
+  const { isDataAvailable, fetchRecipes, recipeData } = useRecipes()
   const { uri } = useParams()
-  console.log(uri)
   const encodedUri = encodeURIComponent(uri)
 
   useEffect(() => {
-    console.log('refetching?')
     fetchRecipes(undefined, encodedUri)
   }, [])
 
@@ -78,34 +76,43 @@ function RecipeDetail() {
     </>
   )
 
-  const fatMacros = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
-    if (key.includes('FA')) {
-      const nutrient = recipe.totalNutrients[key]
-      const dailyValue = recipe.totalDaily[key]
-      acc.push({
-        label: nutrient.label,
-        quantity: `${nutrient.quantity.toFixed(0)}${nutrient.unit}`,
-        dv: dailyValue?.quantity.toFixed(0)
-      })
+  const fatMacros = () => {
+    const macros = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
+      if (key.includes('FA')) {
+        const nutrient = recipe.totalNutrients[key]
+        const dailyValue = recipe.totalDaily[key]
+        acc.push({
+          label: nutrient.label,
+          quantity: `${nutrient.quantity.toFixed(0)}${nutrient.unit}`,
+          dv: dailyValue?.quantity.toFixed(0)
+        })
+        return acc
+      }
       return acc
-    }
-    return acc
-  }, [])
+    }, [])
 
-  const macros = (
-    <ul className='fat-macros'>
-      {fatMacros.map(macro => {
-        return (
-          <li key={macro.label}>
-            <span>{macro.label}</span>
-            <span>{macro.quantity}</span>
-            <span>{macro.dv ? `${macro.dv}%` : ''}</span>
-            <hr></hr>
-          </li>
-        )
-      })}
-    </ul>
-  )
+    return (
+      <article className='fat-macros'>
+        {macros.map(macro => {
+          return (
+            <div className='macro-item' key={macro.label}>
+              <div className='macro-grid'>
+                <span className='first-span'>{macro.label}</span>
+                <span className='second-span'>{macro.quantity}</span>
+                <span className='third-span'>
+                  {macro.dv ? `${macro.dv}%` : ''}
+                </span>
+              </div>
+              <hr />
+            </div>
+          )
+        })}
+        <br />
+      </article>
+    )
+  }
+
+  const allMacros = <>{fatMacros()}</>
 
   return (
     <>
@@ -124,7 +131,12 @@ function RecipeDetail() {
           </section>
 
           <section className='recipe-detail-macros recipe-detail-section'>
-            {macros}
+            <div className='column-titles'>
+              <span>Macro</span>
+              <span>Amount</span>
+              <span>D/V</span>
+            </div>
+            {allMacros}
           </section>
         </>
       ) : (

@@ -1,3 +1,7 @@
+.recipe-detail-section {
+  margin-bottom: 4em;
+}
+
 .recipe-detail-label-and-img {
   width: 100%;
 
@@ -22,10 +26,92 @@
     }
     .full-recipe-link {
       margin: 0;
-      
+
       .recipe-link {
         color: inherit;
       }
+    }
+  }
+}
+
+.recipe-detail-ingredients {
+  .ingredients-list {
+    list-style-type: none;
+    line-height: 2;
+
+    input[type='checkbox'] {
+      cursor: pointer;
+    }
+
+    label {
+      margin-left: 1em;
+    }
+  }
+}
+
+.recipe-detail-nutrition {
+  .calories-container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .recipe-detail-health-labels {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.recipe-detail-macros {
+  .column-titles {
+    display: grid;
+    grid-template-columns: 8fr repeat(2, 1fr);
+    align-items: center;
+
+    :nth-child(2) {
+      grid-column: 2;
+      text-align: center;
+    }
+
+    :nth-child(3) {
+      grid-column: 3;
+      text-align: center;
+    }
+  }
+}
+
+article.fat-macros {
+  width: 100%;
+  line-height: 3;
+
+  *:not(:nth-child(1)) {
+    margin-left: 20px;
+  }
+  .macro-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .macro-grid {
+      display: grid;
+      grid-template-columns: 8fr repeat(2, 1fr);
+      align-items: center;
+
+      .second-span {
+        grid-column: 2;
+      }
+
+      .third-span {
+        grid-column: 3;
+      }
+    }
+
+    hr {
+      position: absolute;
+      top: 55%;
+      right: 0px;
+      width: 100%;
     }
   }
 }
