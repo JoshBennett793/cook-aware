@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react'
-import fetchFromAPI from '../apiCalls'
+import { fetchAllRecipes, fetchSingleRecipe } from '../apiCalls'
+import mockData from '../mockData'
 
 const RecipeContext = createContext()
 
@@ -10,8 +11,15 @@ export function RecipeContextProvider({ children }) {
   })
   const [error, setError] = useState('')
 
-  async function fetchRecipes(query) {
-    const data = await fetchFromAPI(query)
+  async function fetchRecipes(query, uri) {
+    let data
+
+    if (uri) {
+      data = await fetchSingleRecipe(uri)
+    } else {
+      data = await fetchAllRecipes(query)
+    }
+
     if (data.name === 'Error') {
       setRecipeData({ isDataAvailable: false, data: {}, message: data.message })
     } else {
@@ -34,6 +42,7 @@ export function RecipeContextProvider({ children }) {
 export function useRecipes() {
   const recipes = useContext(RecipeContext)
   if (!recipes) {
+    console.warn('useRecipes must be used within RecipeProvider')
     throw new Error('useRecipes must be used within RecipeProvider')
   }
   return recipes
