@@ -46,7 +46,7 @@ describe('Search form submission user flow ', () => {
             cy.get('.recipe-img').should(
               'have.attr',
               'alt',
-              'Thumbnail of cooked dish that pertains to recipe'
+              "Popeye Tso's Chicken Recipe"
             )
 
             cy.get('.recipe-label').should('have.text', "Popeye Tso's Chicken")
@@ -66,7 +66,7 @@ describe('Search form submission user flow ', () => {
             cy.get('.recipe-img').should(
               'have.attr',
               'alt',
-              'Thumbnail of cooked dish that pertains to recipe'
+              'Grilled Chicken Nuggets Recipe'
             )
 
             cy.get('.recipe-label').should(
