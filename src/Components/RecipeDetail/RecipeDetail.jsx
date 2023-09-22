@@ -112,7 +112,56 @@ function RecipeDetail() {
     )
   }
 
-  const allMacros = <>{fatMacros()}</>
+  const carbs = () => {
+    const nutrientValues = [
+      'CHOCDF',
+      'CHOCDF.net',
+      'FIBTG',
+      'SUGAR',
+      'SUGAR.added'
+    ]
+
+    const carbs = Object.keys(recipe.totalNutrients).reduce((acc, key) => {
+      if (nutrientValues.includes(key)) {
+        const nutrient = recipe.totalNutrients[key]
+        const dailyValue = recipe.totalDaily[key]
+        acc.push({
+          label: nutrient.label,
+          quantity: `${nutrient.quantity.toFixed(0)}${nutrient.unit}`,
+          dv: dailyValue?.quantity.toFixed(0)
+        })
+        return acc
+      }
+      return acc
+    }, [])
+
+    return (
+      <article className='fat-macros'>
+        {carbs.map(carb => {
+          return (
+            <div className='macro-item' key={carb.label}>
+              <div className='macro-grid'>
+                <span className='first-span'>{carb.label}</span>
+                <span className='second-span'>{carb.quantity}</span>
+                <span className='third-span'>
+                  {carb.dv ? `${carb.dv}%` : ''}
+                </span>
+              </div>
+              <hr />
+            </div>
+          )
+        })}
+        <br />
+      </article>
+    )
+  }
+
+  const allMacros = (
+    <>
+      {fatMacros()}
+      {carbs()}
+    </>
+  )
 
   return (
     <>
