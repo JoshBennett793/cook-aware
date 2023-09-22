@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from 'react'
 import { fetchAllRecipes, fetchSingleRecipe } from '../apiCalls'
-import mockData from '../mockData'
 
 const RecipeContext = createContext()
 
