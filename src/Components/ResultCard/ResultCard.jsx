@@ -20,11 +20,7 @@ function ResultCard({ recipe }) {
   return (
     <article className='recipe-card'>
       <Link to={`/recipe/${encodedUri}`} className='recipe-link'>
-        <img
-          src={imageUrl}
-          alt={label}
-          className='recipe-img'
-        />
+        <img src={imageUrl} alt={label} className='recipe-img' />
         <p className='recipe-label'>{formattedLabel}</p>
         <div className='recipe-text-wrapper'>
           <p className='recipe-calories'>
