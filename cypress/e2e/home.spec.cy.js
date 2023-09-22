@@ -17,7 +17,7 @@ describe('Home page DOM content', () => {
 
     cy.get('#queryInput')
       .should('exist')
-      .and('have.prop', 'placeholder', 'Search by keyword... (optional)')
+      .and('have.prop', 'placeholder', 'Search by keyword...')
 
     cy.get('button[type=submit]')
       .should('exist')

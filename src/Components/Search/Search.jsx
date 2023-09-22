@@ -39,7 +39,7 @@ function Search() {
             type='text'
             name='query'
             id='queryInput'
-            placeholder='Search by keyword... (optional)'
+            placeholder='Search by keyword...'
             onChange={updateFormData}
           />
         </div>
