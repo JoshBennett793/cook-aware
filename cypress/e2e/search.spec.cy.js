@@ -114,12 +114,36 @@ describe('Error handling', () => {
       cy.contains('The search keyword may only contain letters and numbers')
     })
   })
-  
+
   it('Prevents user from submitting blank form', () => {
     cy.get('form').within(() => {
       cy.get('@submitBtn').click()
-  
-      cy.contains('The search query cannot be blank')
+
+      cy.get('.err-msg')
+        .should('exist')
+        .and('include.text', 'The search query cannot be blank')
+    })
+  })
+
+  it('Error message goes away if user re-searches for valid query', () => {
+    cy.get('form').within(() => {
+      cy.get('@searchBar').type('gibberish!@#$')
+      cy.get('@submitBtn').click()
+
+      cy.get('.err-msg')
+        .should('exist')
+        .and(
+          'include.text',
+          'The search keyword may only contain letters and numbers'
+        )
+    })
+
+    cy.get('form').within(() => {
+      cy.get('@searchBar').clear()
+      cy.get('@searchBar').type('Chicken Nuggets')
+      cy.get('@submitBtn').click()
+
+      cy.get('.err-msg').should('not.exist')
     })
   })
 })

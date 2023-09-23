@@ -52,7 +52,7 @@ function Search() {
         <div className='button-wrapper'>
           <button type='submit'>Search</button>
         </div>
-        {error && <p>{error}</p>}
+        {error && <p className='err-msg'>{error}</p>}
       </form>
     </div>
   )
