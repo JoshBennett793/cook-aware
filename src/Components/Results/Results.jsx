@@ -12,7 +12,7 @@ function Results() {
 
   useEffect(() => {
     if (query) {
-      setResult(<p>Loading {query} recipes...</p>)
+      setResult(<p className='loading-state'>Loading {query} recipes...</p>)
       fetchRecipes(query)
     } else {
       setResult(<p>Your recipes will appear here...</p>)
@@ -21,7 +21,7 @@ function Results() {
 
   useEffect(() => {
     if (errorOccurred) {
-      setResult(<p>{errMsg}</p>)
+      setResult(<p className='err-msg'>{errMsg}</p>)
     }
   }, [errorOccurred, errMsg])
 
