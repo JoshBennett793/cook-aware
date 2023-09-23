@@ -5,14 +5,14 @@ import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 function Results() {
-  const { isDataAvailable, fetchRecipes, data, errorOccurred, errMsg } =
+  const { isDataAvailable, fetchRecipes, errorOccurred, errMsg, data } =
     useRecipes()
   const [result, setResult] = useState(undefined)
   const { query } = useParams()
 
   useEffect(() => {
     if (query) {
-      setResult(<p>Loading {query} recipes...</p>)
+      setResult(<p className='loading-state'>Loading {query} recipes...</p>)
       fetchRecipes(query)
     } else {
       setResult(<p>Your recipes will appear here...</p>)
@@ -21,7 +21,7 @@ function Results() {
 
   useEffect(() => {
     if (errorOccurred) {
-      setResult(<p>{errMsg}</p>)
+      setResult(<p className='err-msg'>{errMsg}</p>)
     }
   }, [errorOccurred, errMsg])
 
@@ -42,7 +42,9 @@ function Results() {
 useRecipes.propTypes = {
   isDataAvailable: PropTypes.bool.isRequired,
   fetchRecipes: PropTypes.func.isRequired,
-  recipeData: PropTypes.shape({
+  errorOccurred: PropTypes.bool.isRequired,
+  errMsg: PropTypes.string.isRequired,
+  data: PropTypes.shape({
     hits: PropTypes.arrayOf(
       PropTypes.shape({
         recipe: PropTypes.shape({

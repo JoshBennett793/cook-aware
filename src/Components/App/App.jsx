@@ -15,6 +15,15 @@ function App() {
           <Route path='/' element={<Results />}></Route>
           <Route path='/recipes/:query' element={<Results />}></Route>
           <Route path='/recipe/:uri' element={<RecipeDetail />}></Route>
+          <Route
+            path='*'
+            element={
+              <p>
+                We couldn&apos;t find anything here. Please try searching for a
+                valid keyword.
+              </p>
+            }
+          ></Route>
         </Routes>
       </main>
     </>
