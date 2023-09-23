@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 function Results() {
-  const { isDataAvailable, fetchRecipes, data, errorOccurred, errMsg } =
+  const { isDataAvailable, fetchRecipes, errorOccurred, errMsg, data } =
     useRecipes()
   const [result, setResult] = useState(undefined)
   const { query } = useParams()
@@ -42,7 +42,9 @@ function Results() {
 useRecipes.propTypes = {
   isDataAvailable: PropTypes.bool.isRequired,
   fetchRecipes: PropTypes.func.isRequired,
-  recipeData: PropTypes.shape({
+  errorOccurred: PropTypes.bool.isRequired,
+  errMsg: PropTypes.string.isRequired,
+  data: PropTypes.shape({
     hits: PropTypes.arrayOf(
       PropTypes.shape({
         recipe: PropTypes.shape({
