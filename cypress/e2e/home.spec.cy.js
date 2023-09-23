@@ -19,12 +19,12 @@ describe('Home page DOM content', () => {
       .should('exist')
       .and('have.prop', 'placeholder', 'Search by keyword...')
 
-    cy.get('button[type=submit]')
-      .should('exist')
-      .and('include.text', 'Search')
-    
-    cy.get('.recipe-heading')
-      .should('exist')
-      .and('include.text', 'Recipes')
+    cy.get('button[type=submit]').should('exist').and('include.text', 'Search')
+
+    cy.get('.recipe-heading').should('exist').and('include.text', 'Recipes')
+
+    cy.get('.results-container')
+      .find('p')
+      .contains('Your recipes will appear here...')
   })
 })
