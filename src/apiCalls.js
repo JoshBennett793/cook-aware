@@ -13,7 +13,14 @@ export async function fetchAllRecipes(query) {
       throw new Error('Something went wrong fetching data')
     }
 
-    return await response.json()
+    const data = await response.json()
+
+    if (!data.count) {
+      throw new Error(
+        'Your search did not produce any results. Please try a different search'
+      )
+    }
+    return data
   } catch (error) {
     return error
   }
