@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Route handling', () => {
+describe('Route Handling', () => {
   beforeEach(() => {
     const apiID = Cypress.env('API_ID')
     const apiKey = Cypress.env('API_KEY')
@@ -51,5 +51,14 @@ describe('Route handling', () => {
         'http://localhost:5173/recipe/http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_b5e1c34c9042a35a534069f438ec86f'
       )
     })
+  })
+})
+
+describe('Bad Route Handling', () => {
+  it("Provides helpful message if user navigates to path that doesn't exist", () => {
+    cy.visit('http://localhost:5173/gibberish')
+    cy.contains(
+      "We couldn't find anything here. Please try searching for a valid keyword."
+    )
   })
 })
