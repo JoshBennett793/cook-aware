@@ -114,4 +114,12 @@ describe('Error handling', () => {
       cy.contains('The search keyword may only contain letters and numbers')
     })
   })
+  
+  it('Prevents user from submitting blank form', () => {
+    cy.get('form').within(() => {
+      cy.get('@submitBtn').click()
+  
+      cy.contains('The search query cannot be blank')
+    })
+  })
 })
