@@ -1,41 +1,39 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRecipes } from '../../context/ContextProvider'
 import ResultCard from '../ResultCard/ResultCard'
 import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 function Results() {
-  const { isDataAvailable, fetchRecipes, recipeData } = useRecipes()
+  const { isDataAvailable, fetchRecipes, data, errorOccurred, errMsg } =
+    useRecipes()
+  const [result, setResult] = useState(undefined)
   const { query } = useParams()
 
   useEffect(() => {
     if (query) {
+      setResult(<p>Loading {query} recipes...</p>)
       fetchRecipes(query)
+    } else {
+      setResult(<p>Your recipes will appear here...</p>)
     }
   }, [query])
 
-  if (!query) {
-    return (
-      <>
-        <h2 className='recipe-heading'>Recipes</h2>
-        <section className='results-container'>
-          <p>Your recipes will appear here...</p>
-        </section>
-      </>
-    )
-  }
+  useEffect(() => {
+    if (errorOccurred) {
+      setResult(<p>{errMsg}</p>)
+    }
+  }, [errorOccurred, errMsg])
 
   return (
     <>
       <h2 className='recipe-heading'>Recipes</h2>
       <section className='results-container'>
-        {isDataAvailable ? (
-          recipeData?.hits.map(({ recipe }) => (
-            <ResultCard recipe={recipe} key={recipe.uri} />
-          ))
-        ) : (
-          <p>Loading {query} recipes...</p>
-        )}
+        {isDataAvailable
+          ? data.hits.map(({ recipe }) => (
+              <ResultCard recipe={recipe} key={recipe.uri} />
+            ))
+          : result}
       </section>
     </>
   )

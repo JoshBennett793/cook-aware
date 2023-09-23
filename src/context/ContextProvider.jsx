@@ -5,8 +5,10 @@ const RecipeContext = createContext()
 
 export function RecipeContextProvider({ children }) {
   const [recipeData, setRecipeData] = useState({
+    errorOccurred: false,
     isDataAvailable: false,
-    recipeData: {}
+    data: null,
+    errMsg: ''
   })
   const [error, setError] = useState('')
 
@@ -20,9 +22,13 @@ export function RecipeContextProvider({ children }) {
     }
 
     if (data.name === 'Error') {
-      setRecipeData({ isDataAvailable: false, data: {}, message: data.message })
+      setRecipeData({
+        errorOccurred: true,
+        data: null,
+        errMsg: data.message
+      })
     } else {
-      setRecipeData({ isDataAvailable: true, recipeData: data })
+      setRecipeData({ isDataAvailable: true, data })
     }
   }
 
