@@ -90,3 +90,28 @@ describe('Search form submission user flow ', () => {
     })
   })
 })
+
+describe('Error handling', () => {
+  beforeEach(() => {
+    const apiID = Cypress.env('API_ID')
+    const apiKey = Cypress.env('API_KEY')
+
+    cy.intercept(
+      'GET',
+      `https://api.edamam.com/api/recipes/v2?type=public&q=Chicken%20Nuggets&app_id=${apiID}&app_key=${apiKey}`,
+      { statusCode: 200, fixture: 'searchRequest.json' }
+    ).as('searchRequest')
+    cy.visit('http://localhost:5173')
+    cy.get('input[name=query]').as('searchBar')
+    cy.get('button[type=submit]').as('submitBtn')
+  })
+
+  it('Prevents user from searching for a keyword that contains symbols', () => {
+    cy.get('form').within(() => {
+      cy.get('@searchBar').type('gibberish!@#$')
+      cy.get('@submitBtn').click()
+
+      cy.contains('The search keyword may only contain letters and numbers')
+    })
+  })
+})
