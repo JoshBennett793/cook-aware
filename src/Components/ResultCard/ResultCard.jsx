@@ -41,15 +41,18 @@ ResultCard.propTypes = {
   recipe: PropTypes.shape({
     uri: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    source: PropTypes.string.isRequired,
-    calories: PropTypes.number.isRequired,
-    yield: PropTypes.number.isRequired,
     images: PropTypes.shape({
       SMALL: PropTypes.shape({
-        url: PropTypes.string.isRequired
+        url: PropTypes.string
       })
-    }).isRequired,
-    ingredientLines: PropTypes.arrayOf(PropTypes.string).isRequired
+    }),
+    source: PropTypes.string,
+    shareAs: PropTypes.string,
+    yield: PropTypes.number.isRequired,
+    dietLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    healthLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    ingredientLines: PropTypes.arrayOf(PropTypes.string).isRequired,
+    calories: PropTypes.number.isRequired
   }).isRequired
 }
 

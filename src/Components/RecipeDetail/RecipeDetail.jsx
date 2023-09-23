@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 import { useRecipes } from '../../context/ContextProvider'
 import { useEffect } from 'react'
@@ -242,6 +243,47 @@ function RecipeDetail() {
       )}
     </>
   )
+}
+
+useRecipes.propTypes = {
+  isDataAvailable: PropTypes.bool.isRequired,
+  fetchRecipes: PropTypes.func.isRequired,
+  recipeData: PropTypes.shape({
+    hits: PropTypes.arrayOf(
+      PropTypes.shape({
+        recipe: PropTypes.shape({
+          uri: PropTypes.string.isRequired,
+          label: PropTypes.string.isRequired,
+          images: PropTypes.shape({
+            SMALL: PropTypes.shape({
+              url: PropTypes.string
+            })
+          }),
+          source: PropTypes.string,
+          shareAs: PropTypes.string,
+          yield: PropTypes.number.isRequired,
+          dietLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
+          healthLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
+          ingredientLines: PropTypes.arrayOf(PropTypes.string).isRequired,
+          calories: PropTypes.number.isRequired,
+          totalNutrients: PropTypes.objectOf(
+            PropTypes.shape({
+              label: PropTypes.string.isRequired,
+              quantity: PropTypes.number.isRequired,
+              unit: PropTypes.string.isRequired
+            })
+          ).isRequired,
+          totalDaily: PropTypes.objectOf(
+            PropTypes.shape({
+              label: PropTypes.string.isRequired,
+              quantity: PropTypes.number.isRequired,
+              unit: PropTypes.string.isRequired
+            })
+          ).isRequired
+        }).isRequired
+      })
+    )
+  }).isRequired
 }
 
 export default RecipeDetail
