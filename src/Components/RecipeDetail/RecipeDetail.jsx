@@ -4,15 +4,15 @@ import { useRecipes } from '../../context/ContextProvider'
 import { useEffect } from 'react'
 
 function RecipeDetail() {
-  const { isDataAvailable, fetchRecipes, recipeData } = useRecipes()
+  const { isDataAvailable, fetchRecipes, data } = useRecipes()
   const { uri } = useParams()
   const encodedUri = encodeURIComponent(uri)
 
   useEffect(() => {
     fetchRecipes(undefined, encodedUri)
-  }, [])
+  }, [encodedUri])
 
-  const recipe = recipeData?.hits?.[0]?.recipe
+  const recipe = data?.hits?.[0]?.recipe
 
   const labelAndImg = (
     <>
