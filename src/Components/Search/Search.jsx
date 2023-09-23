@@ -21,9 +21,14 @@ function Search() {
 
   const submitForm = async e => {
     e.preventDefault()
-    formData.query
-      ? navigate(`/recipes/${formData.query}`)
-      : setError('The search query cannot be blank')
+    const regex = /^[a-zA-Z0-9]+$/
+    if (!formData.query) {
+      setError('The search query cannot be blank')
+    } else if (!regex.test(formData.query)) {
+      setError('The search keyword may only contain letters and numbers')
+    } else {
+      navigate(`/recipes/${formData.query}`)
+    }
   }
 
   return (
