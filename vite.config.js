@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   define: {
-    'process.env.API_ID': import.meta.env.VITE_API_ID,
-    'process.env.API_KEY': import.meta.env.VITE_API_KEY
+    'process.env.API_ID': import.meta.env.API_ID,
+    'process.env.API_KEY': import.meta.env.API_KEY
   }
 })
