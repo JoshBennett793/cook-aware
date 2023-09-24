@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 export async function fetchAllRecipes(query) {
   const accessPoint = 'https://api.edamam.com/api/recipes/v2'
-  const apiID = process.env.API_ID
-  const apiKey = process.env.API_KEY
+  const apiID = import.meta.env.VITE_API_ID
+  const apiKey = import.meta.env.VITE_API_KEY
 
   try {
     const response = await fetch(
