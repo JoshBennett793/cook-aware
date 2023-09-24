@@ -27,8 +27,8 @@ export async function fetchAllRecipes(query) {
 }
 export async function fetchSingleRecipe(uri) {
   const accessPoint = 'https://api.edamam.com/api/recipes/v2'
-  const apiID = process.env.API_ID
-  const apiKey = process.env.API_KEY
+  const apiID = '53e00481'
+  const apiKey = '096ce025773d4b55fe49d5b246a952ae'
 
   try {
     const response = await fetch(
