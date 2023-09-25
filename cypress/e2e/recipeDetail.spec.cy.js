@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 describe('Single Recipe Detail Component', () => {
   beforeEach(() => {
-    const apiID = Cypress.env('API_ID')
-    const apiKey = Cypress.env('API_KEY')
+    const apiID = '53e00481'
+    const apiKey = '096ce025773d4b55fe49d5b246a952ae'
 
     cy.intercept(
       'GET',
