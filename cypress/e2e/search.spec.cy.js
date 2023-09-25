@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 describe('Search form submission user flow ', () => {
   beforeEach(() => {
-    const apiID = Cypress.env('API_ID')
-    const apiKey = Cypress.env('API_KEY')
+    const apiID = '53e00481'
+    const apiKey = '096ce025773d4b55fe49d5b246a952ae'
 
     cy.intercept(
       'GET',
@@ -48,10 +48,10 @@ describe('Search form submission user flow ', () => {
       cy.get('@searchBar').type('Chicken')
       cy.get('@submitBtn').click()
     })
-    
+
     cy.get('.loading-state')
-    .should('exist')
-    .and('include.text', 'Loading Chicken recipes...')
+      .should('exist')
+      .and('include.text', 'Loading Chicken recipes...')
 
     cy.wait('@delayedRequest')
 
@@ -119,8 +119,8 @@ describe('Search form submission user flow ', () => {
 
 describe('Error handling', () => {
   beforeEach(() => {
-    const apiID = Cypress.env('API_ID')
-    const apiKey = Cypress.env('API_KEY')
+    const apiID = '53e00481'
+    const apiKey = '096ce025773d4b55fe49d5b246a952ae'
 
     cy.intercept(
       'GET',
