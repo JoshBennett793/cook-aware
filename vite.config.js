@@ -1,15 +1,15 @@
 import { defineConfig } from 'vite'
-import { config } from 'dotenv'
 import react from '@vitejs/plugin-react'
+// import { config } from 'dotenv'
 
-const env = config().parsed
+// const env = config().parsed
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-
-  define: {
-    'process.env.API_ID': JSON.stringify(env.API_ID),
-    'process.env.API_KEY': JSON.stringify(env.API_KEY)
+export default defineConfig(() => {
+  return {
+    plugins: [react()],
+    // define: {
+    //   API_ID: env.API_ID,
+    //   API_KEY: env.API_KEY
+    // }
   }
 })
